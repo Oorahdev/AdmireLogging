@@ -1,4 +1,4 @@
-﻿Public Class AdmireLogging
+﻿Public Class ElasticsearchLogger
 
     Public Shared Sub LogException(ex As Exception)
         Dim url As String = "http://172.31.22.131:9200/admire-error-log/_doc"

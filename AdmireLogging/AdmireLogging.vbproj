@@ -61,7 +61,7 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdmireLogging.vb" />
+    <Compile Include="ElasticsearchLogger.vb" />
     <Compile Include="HttpUtility.vb" />
     <Compile Include="LogItem.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
