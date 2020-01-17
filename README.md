@@ -1,9 +1,9 @@
 # AdmireLogging
 
 ### Description
-DLL library for logging exceptions to Elasticsearch <br/>
-Elasticsearch index: admire-error-log <br/>
-Elasticsearch document example:<br/>
+Dll library for logging exceptions to Elasticsearch <br/>
+**Elasticsearch index:** admire-error-log <br/>
+**Elasticsearch document example:**<br/>
 ```
 {
   "_index": "admire-error-log",
@@ -25,3 +25,10 @@ Elasticsearch document example:<br/>
 
 ### Dll Dependencies
 Newtonsoft.Json version 12.0.0.0
+
+### Usage
+```
+Imports AdmireLogging
+...
+ElasticsearchLogger.LogException(exception)
+```
