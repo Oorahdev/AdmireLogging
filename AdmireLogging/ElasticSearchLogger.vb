@@ -5,15 +5,18 @@
         Dim log As LogItem = New LogItem
         Dim trace = New StackTrace(ex, True)
 
-        log.PluginName = Reflection.Assembly.GetCallingAssembly.GetName.Name
-        Dim pathParts As String() = trace.GetFrame(0).GetFileName.Split("\\")
-        log.FileName = pathParts(pathParts.Length - 1)
-        log.Method = trace.GetFrame(0).GetMethod.Name
-        log.Line = trace.GetFrame(0).GetFileLineNumber().ToString
-        log.Exception = ex.Message
-        log.Details = trace.GetFrame(0).ToString
-        log.DateTime = Now
-        sendPostRequestAsync(url, log)
+        Try
+            log.PluginName = Reflection.Assembly.GetCallingAssembly.GetName.Name
+            Dim pathParts As String() = trace.GetFrame(0).GetFileName.Split("\\")
+            log.FileName = pathParts(pathParts.Length - 1)
+            log.Method = trace.GetFrame(0).GetMethod.Name
+            log.Line = trace.GetFrame(0).GetFileLineNumber().ToString
+            log.Exception = ex.Message
+            log.Details = trace.GetFrame(0).ToString
+            log.DateTime = Now
+            sendPostRequestAsync(url, log)
+        Catch e1 As Exception
+        End Try
 
     End Sub
 

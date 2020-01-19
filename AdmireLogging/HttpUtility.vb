@@ -66,7 +66,7 @@ Public Module HttpUtility
     End Function
 
     Private Sub handleWebException(ex As WebException)
-        MsgBox(ex.Message + vbCrLf + vbCrLf + readAndCloseResponse(ex.Response))
+        readAndCloseResponse(ex.Response)
     End Sub
 
 End Module
