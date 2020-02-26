@@ -14,10 +14,10 @@ Dll library for logging exceptions to Elasticsearch <br/>
     "PluginName": "AdmirePluginOorahK4K",
     "FileName": "admFrmCustom01.vb",
     "Method": "InitForm",
-    "Line": "321",
+    "Line": 321,
     "Exception": "I/O error occurred.",
     "Details": "InitForm at offset 283 in file:line:column C:\\Git\\AdmirePluginOorahK4K\\admFrmCustom01.vb:321:17\r\n",
-    "DateTime": "2020-1-17 03:50:10.365"
+    "Timestamp": "2020-1-17T03:50:10.365"
   }
 }
 ```
