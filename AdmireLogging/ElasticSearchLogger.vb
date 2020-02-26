@@ -10,10 +10,10 @@
             Dim pathParts As String() = trace.GetFrame(0).GetFileName.Split("\\")
             log.FileName = pathParts(pathParts.Length - 1)
             log.Method = trace.GetFrame(0).GetMethod.Name
-            log.Line = trace.GetFrame(0).GetFileLineNumber().ToString
+            log.Line = trace.GetFrame(0).GetFileLineNumber()
             log.Exception = ex.Message
             log.Details = trace.GetFrame(0).ToString
-            log.DateTime = Now
+            log.Timestamp = DateTime.UtcNow
             sendPostRequestAsync(url, log)
         Catch e1 As Exception
         End Try

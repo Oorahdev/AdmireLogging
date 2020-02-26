@@ -3,9 +3,9 @@
     Public PluginName As String
     Public FileName As String
     Public Method As String
-    Public Line As String
+    Public Line As Integer
     Public Exception As String
     Public Details As String
-    Public DateTime As Date
+    Public Timestamp As Date
 
 End Class

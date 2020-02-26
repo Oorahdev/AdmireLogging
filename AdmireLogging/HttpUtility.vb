@@ -18,7 +18,7 @@ Public Module HttpUtility
 
             Dim rs = New RequestState
             Dim jsonSettings As JsonSerializerSettings = New JsonSerializerSettings
-            jsonSettings.DateFormatString = "yyyy-M-d HH:mm:ss.fff"
+            jsonSettings.DateFormatString = "yyyy-MM-ddTHH:mm:ss.fff"
             jsonSettings.Formatting = Formatting.Indented
             Dim jsonData As String = JsonConvert.SerializeObject(requestObj, jsonSettings)
             rs.json = JsonData
